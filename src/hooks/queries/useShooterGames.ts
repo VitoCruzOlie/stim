@@ -44,12 +44,12 @@ const gameSchema = z.object({
   
 });
 
-//Function to fetch the games from the API, get action games with a page size of 6
+//Function to fetch the games from the API, get shooter games with a page size of 6
 async function fetchGames() {
   try {
     console.log("fetching games");
     const response = await s.get({
-      url: `/games?key=${env.VITE_API_KEY}&genres=action&page_size=6`,
+      url: `/games?key=${env.VITE_API_KEY}&genres=shooter&page_size=6`,
       schema: gameSchema,
     });
     console.log("fetched games", response);
@@ -61,10 +61,9 @@ async function fetchGames() {
 
 
 //export the useQuery function to be used in the component
-export function useActionGames() {
-  console.log("useGames");
+export function useShooterGames() {
   return useQuery({
-    queryKey: ["actionGames"],
+    queryKey: ["shooterGames"],
     queryFn: fetchGames,
     staleTime: 1000 * 60,
   });

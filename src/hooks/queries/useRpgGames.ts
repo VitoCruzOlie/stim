@@ -44,7 +44,7 @@ const gameSchema = z.object({
   
 });
 
-//Function to fetch the games from the API, get action games with a page size of 18
+//Function to fetch the games from the API, get Rpg's games with a page size of 6
 async function fetchGames() {
   try {
     console.log("fetching games");
