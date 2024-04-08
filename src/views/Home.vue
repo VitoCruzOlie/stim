@@ -4,6 +4,7 @@
 //Component imports
 import ActionGameSection from "@/components/ActionGameSection.vue";
 import IndieGameSection from "@/components/IndieGameSection.vue";
+import RpgGameSection from "@/components/RpgGameSection.vue";
 import SideBar from "@/components/SideBar.vue";
 import NavBar from "@/components/NavBar.vue";
 </script>
@@ -29,6 +30,7 @@ import NavBar from "@/components/NavBar.vue";
         <div class="flex flex-col items-center justify-center w-full gap-4">
           <ActionGameSection />
           <IndieGameSection />
+          <RpgGameSection/>
         </div>
       </div>
     </div>
