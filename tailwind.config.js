@@ -33,7 +33,11 @@ export default {
           900:"#3B3C6D",
           950:"#272744",
         },
+      },
+      screens:{
+        "3xl":"2000px",
       }
+
     },
   },
   plugins: [],

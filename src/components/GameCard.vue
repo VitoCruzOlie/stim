@@ -23,7 +23,7 @@ defineProps<{
   <div
     class="bg-transparent rounded-lg transition-all hover:bg-gradient-to-br from-primary-500 to-secondary-500 p-0.5"
   >
-    <div class="w-80 shadow-2xl h-64 overflow-hidden rounded-lg relative">
+    <div class="w-80 xl:w-72 shadow-2xl h-64 overflow-hidden rounded-lg relative">
       <div class="w-full h-full overflow-hidden relative">
         
         <!--Navigate to the game detail page passing the gameId -->

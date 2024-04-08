@@ -2,17 +2,11 @@
 //Library imports
 
 //Component imports
-import GameCard from "@/components/GameCard.vue";
+import ActionGameSection from "@/components/ActionGameSection.vue";
 import SideBar from "@/components/SideBar.vue";
 import NavBar from "@/components/NavBar.vue";
 
-//Hook imports
-import { useGames } from "@/hooks/queries/useGames";
 
-
-const games = useGames();
-
-console.log(games.data.value);
 </script>
 
 <template>
@@ -22,29 +16,12 @@ console.log(games.data.value);
     <NavBar/>
     </div>
     <SideBar/>
-    <div class="flex flex-row relative">
+    <div class="flex flex-row relative justify-center">
 
-    <div class="text-center text-white flex flex-col items-start pb-5"></div>
 
-    <div class="flex w-full justify-center overflow-y-scroll max-h-screen">
-      <div class="flex flex-col w-full max-w-7xl">
-        <div class="pt-20 pb-5 pl-6">
-          <h1 class="text-white text-3xl font-bold">Popular Games</h1>
-        </div>
-        <div
-          class="flex flex-wrap w-full gap-4 items-start justify-center h-fit bg-secondary-200"
-        >
-          <GameCard
-            v-for="game in games.data.value?.results"
-            :key="game.id"
-            :game-id="game.id"
-            :game-title="game.name"
-            :game-image="game.background_image"
-            :gamePlatforms="game.platforms"
-            :gameScore="game.rating"
-            :metacriticScore="game.metacritic"
-          />
-        </div>
+    <div class="flex w-full justify-center overflow-y-scroll pt-16 max-h-screen items-center bg-red-600">
+      <div class="flex flex-col items-center justify-center w-full">
+        <ActionGameSection/>
       </div>
     </div>
   </div>
