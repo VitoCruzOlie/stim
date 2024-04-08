@@ -49,7 +49,7 @@ async function fetchGames() {
   try {
     console.log("fetching games");
     const response = await s.get({
-      url: `/games?key=${env.VITE_API_KEY}&genres=action&page_size=6`,
+      url: `/games?key=${env.VITE_API_KEY}&genres=indie&page_size=6`,
       schema: gameSchema,
     });
     console.log("fetched games", response);
@@ -61,10 +61,9 @@ async function fetchGames() {
 
 
 //export the useQuery function to be used in the component
-export function useActionGames() {
-  console.log("useGames");
+export function useIndieGames() {
   return useQuery({
-    queryKey: ["actionGames"],
+    queryKey: ["indieGames"],
     queryFn: fetchGames,
     staleTime: 1000 * 60,
   });
