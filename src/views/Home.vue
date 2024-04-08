@@ -3,7 +3,7 @@
 
 //Component imports
 import ActionGameSection from "@/components/ActionGameSection.vue";
-import MultiplayerGameSection from "@/components/MultiplayerGameSection.vue";
+import IndieGameSection from "@/components/IndieGameSection.vue";
 import SideBar from "@/components/SideBar.vue";
 import NavBar from "@/components/NavBar.vue";
 </script>
@@ -24,11 +24,11 @@ import NavBar from "@/components/NavBar.vue";
     
     <div class="flex flex-row relative justify-center">
       <div
-        class="flex w-full justify-center overflow-y-scroll pt-16 max-h-screen items-center"
+        class="flex w-full justify-center  pt-16 max-h-screen items-center"
       >
         <div class="flex flex-col items-center justify-center w-full gap-4">
           <ActionGameSection />
-          <MultiplayerGameSection />
+          <IndieGameSection />
         </div>
       </div>
     </div>
