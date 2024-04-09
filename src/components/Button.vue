@@ -7,16 +7,16 @@ import { tv, type VariantProps } from "tailwind-variants";
 const buttonStyles = tv({
   slots:{
     button:'rounded-lg gap-2 px-5 py-1.5',
-    text:'text-base'
+    text:' font-bold text-base'
   },
   variants:{
     color:{
       primary:{
-        button:'bg-secondary-700',
+        button:'bg-secondary-400',
         text:'text-white'
       },
       outline:{
-        button:'border border-secondary-700 bg-transparent',
+        button:'border border-secondary-700 bg-white',
         text:'text-secondary-700'
       }
     }

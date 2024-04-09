@@ -17,24 +17,32 @@ const id = ref(route.params.id);
 const game = useSearchGameById(id);
 </script>
 <template>
-  <main class="min-h-svh max-h-svh overflow-hidden h-fit relative bg-slate-900">
+  <main
+    class="min-h-svh max-h-svh pb-12 overflow-hidden h-fit relative bg-slate-900 flex flex-col"
+  >
     <div
-      class="w-full flex items-center justify-center absolute left-0 top-0 z-10"
+      class="w-full flex items-center justify-center sticky left-0 top-0 z-20"
     >
       <NavBar />
       <SideBar />
     </div>
-    <div class="flex items-center justify-center w-full pt-24">
-      <DetailGameSection
-        :key="game.data.value?.id"
-        :gameId="game.data.value?.id"
-        :game-image="game.data.value?.background_image"
-        :game-title="game.data.value?.name"
-        :short-screenshots="game.data.value?.short_screenshots"
-      />
+    <div class="flex flex-col items-center justify-center w-full overflow-y-scroll pt-48 z-10 h-full min-h-svh max-h-svh absolute top-0 left-0 pb-12">
+      <div
+        class="flex items-center justify-center w-full"
+      >
+        <DetailGameSection
+          :key="game.data.value?.id"
+          :gameId="game.data.value?.id"
+          :game-image="game.data.value?.background_image"
+          :game-title="game.data.value?.name"
+          :short-screenshots="game.data.value?.short_screenshots"
+          :game-description="game.data.value?.description_raw"
+        />
+      </div>
     </div>
+
     <img
-      class="absolute left-0 top-0 w-full opacity-30 min-h-svh -z-10"
+      class="absolute left-0 top-0 w-full opacity-30 min-h-svh max-h-svh z-0"
       src="/backgroundImg.jpg"
       alt=""
     />
