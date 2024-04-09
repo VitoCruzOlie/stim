@@ -6,8 +6,8 @@ import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonStyles = tv({
   slots:{
-    button:'rounded-lg gap-2 px-5 py-1.5',
-    text:' font-bold text-base'
+    button:'rounded-lg gap-2 px-5 py-1.5 pointer',
+    text:' font-bold text-base pointer'
   },
   variants:{
     color:{

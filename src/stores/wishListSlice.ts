@@ -14,6 +14,7 @@ export const useWishListGameStore = defineStore({
   state: initialState,
   actions: {
     addGame(game: Game) {
+      if (this.wishListGames.find((g) => g.id === game.id)) return;
       this.wishListGames.push(game);
     },
     removeGame(gameId: number) {
