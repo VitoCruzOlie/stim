@@ -6,7 +6,7 @@ import { useAutoAnimate } from "@formkit/auto-animate/vue";
 
 //Components Imports
 import UserSectionComponent from "@/components/UserSectionComponent.vue";
-import LikedGameSection from "@/components/LikedGameSection.vue";
+import WishGameSection from "@/components/WishGameSection.vue";
 import LibraryGameSection from "@/components/LibraryGameSection.vue";
 
 //Hook imports
@@ -54,7 +54,7 @@ const sideBarOpen = tv({
       "
     >
       <UserSectionComponent />
-      <LikedGameSection />
+      <WishGameSection />
       <LibraryGameSection />
     </div>
   </div>
