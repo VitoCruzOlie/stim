@@ -3,14 +3,14 @@
 import { defineProps } from "vue";
 
 //Components imports
-import Button from "@/components/Button.vue";
+import AddToWishList from "@/components/AddToWishList.vue";
 
 defineProps<{
-  gameId: number | undefined;
+  gameId: number;
   gameTitle?: string;
   gameImage?: string;
   gameDescription?: string;
-  shortScreenshots?:{
+  shortScreenshots?: {
     id: number;
     image: string;
   }[];
@@ -40,8 +40,12 @@ defineProps<{
         </div>
       </div>
       <div class="flex justify-end items-end pt-2 pb-3 gap-2">
-        <Button :variants="{color:'primary'}" @click="" label="Buy the Game" />
-        <Button :variants="{color:'outline'}" @click="" label="Add to wishlist" />
+        <Button
+          :variants="{ color: 'primary' }"
+          @click=""
+          label="Buy the Game"
+        />
+        <AddToWishList :gameId="gameId" />
       </div>
       <div class="w-full text-white">
         <p>

@@ -54,6 +54,8 @@ const gameSchema = z.object({
   metacritic: z.number().nullable(),
 });
 
+export type Game = z.infer<typeof gameSchema>;
+
 //Function to fetch the game from the API, get the game information by id
 async function fetchGames(id: Ref<string | string[]>) {
   try {
