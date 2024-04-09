@@ -1,15 +1,18 @@
 <script setup lang="ts">
+//Libraries imports
 import { defineProps } from "vue";
+
+//Components imports
+import Button from "@/components/Button.vue";
 
 defineProps<{
   gameId: number | undefined;
-  gameTitle: string | undefined;
-  gameImage: string | undefined;
-  shortScreenshots: {
+  gameTitle?: string;
+  gameImage?: string;
+  shortScreenshots?:{
     id: number;
     image: string;
-  }[] | undefined;
-
+  }[];
 }>();
 </script>
 <template>
@@ -34,6 +37,9 @@ defineProps<{
             />
           </div>
         </div>
+      </div>
+      <div class="flex justify-end items-end pt-2">
+        <Button :variants="{color:'outline'}" @click="" label="Add to wishlist" />
       </div>
     </div>
   </div>
