@@ -16,13 +16,14 @@ const sideBarStore = useSideBarStore();
 
 const sideBarOpen = tv({
   slots: {
-    base: "h-full min-h-screen bg-secondary-200 p-2 gap-4 flex flex-col absolute left-0 top-0 z-10 transition-all duration-300 ease-in-out",
+    base: "h-full min-h-screen bg-secondary-900 p-2 gap-4 flex flex-col absolute left-0 top-0 z-10 transition-all duration-300 ease-in-out",
     section: "flex flex-col gap-2",
+    button:"",
   },
   variants: {
     open: {
       true: { base: "w-80", section: "flex flex-col gap-2" },
-      false: { base: "w-0", section: "hidden" },
+      false: { base: "w-0 bg-transparent", section: "hidden" },
     },
   },
 });
@@ -36,13 +37,12 @@ const sideBarOpen = tv({
       }).base()
     "
   >
-    <UserSectionComponent />
-
+   
     <div
-      class="absolute -right-8 rounded-r-lg pl-1 bg-secondary-200 v-auto-animate"
+      class="absolute -right-8 rounded-r-lg pl-1 bg-secondary-900 v-auto-animate"
     >
       <button class="p-2" @click="sideBarStore.toggle()">
-        <PhList class="text-base text-black" />
+        <PhList class="text-base text-white" />
       </button>
     </div>
 
@@ -53,6 +53,7 @@ const sideBarOpen = tv({
         }).section()
       "
     >
+      <UserSectionComponent />
       <LikedGameSection />
       <LibraryGameSection />
     </div>

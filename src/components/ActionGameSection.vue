@@ -11,7 +11,6 @@ const games = useActionGames();
   <div
     class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 bg-secondary-950 gap-2 p-2 rounded-lg"
   >
-
     <GameCard
       v-for="game in games.data.value?.results"
       :key="game.id"

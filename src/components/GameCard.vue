@@ -40,11 +40,11 @@ defineProps<{
       <div
         class="px-1 py-0.5 absolute bottom-0 left-0 w-full z-[1] bg-secondary-900/70 backdrop-blur-md"
       >
-        <div class="w-full flex flex-col items-start">
-          <h3 class="line-clamp-1 text-white font-bold text-base">
+        <div class="w-full flex flex-col items-start text-white">
+          <h3 class="line-clamp-1  font-bold text-base">
             {{ gameTitle }}
           </h3>
-          <p class="text-white font-light text-sm line-clamp-1">
+          <p class="font-light text-sm line-clamp-1">
 
             <!--map to render the platforms-->
             {{

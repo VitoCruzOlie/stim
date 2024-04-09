@@ -9,6 +9,7 @@ import { type Ref } from "vue";
 //Zod Schema for the game object validation
 const gameSchema = z.object({
   slug: z.string(),
+  id: z.number(),
   name: z.string(),
   playtime: z.number(),
   platforms: z.array(
@@ -40,7 +41,7 @@ const gameSchema = z.object({
     .optional(),
 
   description_raw: z.string(),
-  
+
   genres: z.array(
     z.object({
       id: z.number(),
