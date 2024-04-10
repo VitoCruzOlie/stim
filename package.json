@@ -18,7 +18,9 @@
     "@formkit/auto-animate": "^0.8.1",
     "@phosphor-icons/vue": "^2.1.6",
     "@tanstack/vue-query": "^5.28.13",
+    "pinia": "^2.1.7",
     "spellbinder": "^0.0.4",
+    "tailwind-variants": "^0.2.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "zod": "^3.22.4"

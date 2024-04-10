@@ -1,6 +1,6 @@
 <script setup lang="ts"></script>
 <template>
-  <div class="bg-secondary-400 rounded-lg p-2 flex-row flex">
+  <div class="bg-secondary-800 rounded-lg p-2 flex-row flex">
     <div class="gap-2">
       <div class="p-0.5 flex flex-row items-center gap-2">
         <div>
@@ -12,12 +12,12 @@
         </div>
 
         <div class="gap-2">
-          <h2 class="text-secondary-950 text-base font-bold">UserName</h2>
+          <h2 class="text-white text-base font-bold">UserName</h2>
           <div class="flex flex-col pt-2">
-            <span class="text-secondary-950 text-xs font-medium"
+            <span class="text-white text-xs font-medium"
               >XX Games in library</span
             >
-            <spa class="text-secondary-950 text-xs font-medium"
+            <spa class="text-white text-xs font-medium"
               >XX Liked games</spa
             >
           </div>
