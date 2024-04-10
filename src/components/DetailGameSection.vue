@@ -6,7 +6,7 @@ import { defineProps } from "vue";
 import AddToWishList from "@/components/AddToWishList.vue";
 
 defineProps<{
-  gameId: number;
+  gameId:number;
   gameTitle?: string;
   gameImage?: string;
   gameDescription?: string;

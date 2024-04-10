@@ -19,6 +19,7 @@
     "@phosphor-icons/vue": "^2.1.6",
     "@tanstack/vue-query": "^5.28.13",
     "pinia": "^2.1.7",
+    "radix-vue": "^1.6.2",
     "spellbinder": "^0.0.4",
     "tailwind-variants": "^0.2.1",
     "vue": "^3.4.21",
