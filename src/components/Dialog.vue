@@ -11,19 +11,26 @@ import {
 } from "radix-vue";
 
 import Button from "@/components/Button.vue";
+import Forms from "@/components/Forms.vue";
+
 
 </script>
 <template>
   <DialogRoot>
     <DialogTrigger as-child>
+      <Button :variants="{ color: 'primary' }" label="Buy the Game" />
     </DialogTrigger>
     <DialogPortal>
       <DialogOverlay />
-      <DialogContent>
-        <DialogTitle />
-        <DialogDescription />
-        <DialogClose />
+      <DialogContent class="absolute left-0 top-0 w-full h-svh flex justify-center items-center z-10">
+       <Forms/>
       </DialogContent>
     </DialogPortal>
   </DialogRoot>
 </template>
+
+<!--
+<DialogDescription />
+<DialogClose />
+</DialogContent>
+-->

@@ -4,6 +4,7 @@ import { defineProps } from "vue";
 
 //Components imports
 import AddToWishList from "@/components/AddToWishList.vue";
+import Dialog from "./Dialog.vue";
 
 defineProps<{
   gameId:number;
@@ -40,12 +41,12 @@ defineProps<{
         </div>
       </div>
       <div class="flex justify-end items-end pt-2 pb-3 gap-2">
-        <Button
-          :variants="{ color: 'primary' }"
-          @click=""
-          label="Buy the Game"
-        />
+       
+        
+
         <AddToWishList :gameId="gameId" />
+        <Dialog/>
+
       </div>
       <div class="w-full text-white">
         <p>
