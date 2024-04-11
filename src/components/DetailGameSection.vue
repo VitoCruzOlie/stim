@@ -1,15 +1,17 @@
 <script setup lang="ts">
 //Libraries imports
 import { defineProps } from "vue";
+import { PhStar } from "@phosphor-icons/vue";
 
 //Components imports
 import AddToWishList from "@/components/AddToWishList.vue";
 import Dialog from "./Dialog.vue";
 
 defineProps<{
-  gameId:number;
+  gameId: number;
   gameTitle?: string;
   gameImage?: string;
+  gameRating?: number;
   gameDescription?: string;
   shortScreenshots?: {
     id: number;
@@ -40,15 +42,17 @@ defineProps<{
           </div>
         </div>
       </div>
-      <div class="flex justify-end items-end pt-2 pb-3 gap-2">
-       
-        
+      <div class="flex  items-center pt-2 pb-3 gap-2">
+        <div class="w-full flex flex-row gap-2">
+          <PhStar weight="fill" class="text-2xl text-yellow-400" />
+          <p class="text-white text-xl font-bold">{{ gameRating }}</p>
+        </div>
 
         <AddToWishList :gameId="gameId" />
-        <Dialog/>
-
+        <Dialog :gameId="gameId" />
       </div>
-      <div class="w-full text-white">
+      <div class="w-full text-white flex flex-col gap-2 border-t border-t-neutral-400">
+        <p class="text-white font-bold text-2xl pt-2">Game Description</p>
         <p>
           {{ gameDescription }}
         </p>

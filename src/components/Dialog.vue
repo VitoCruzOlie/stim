@@ -8,6 +8,10 @@ import {
   DialogTrigger,
 } from "radix-vue";
 
+const props = defineProps<{
+  gameId: number;
+}>();
+
 import Button from "@/components/Button.vue";
 import Forms from "@/components/Forms.vue";
 </script>
@@ -23,7 +27,7 @@ import Forms from "@/components/Forms.vue";
       <DialogContent
         class="absolute left-0 top-0 w-full h-svh flex justify-center items-center z-10"
       >
-        <Forms />
+        <Forms :gameId="props.gameId" />
       </DialogContent>
     </DialogPortal>
   </DialogRoot>

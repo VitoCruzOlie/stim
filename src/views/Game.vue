@@ -35,6 +35,7 @@ const game = useSearchGameById(id);
           :gameId="game.data.value?.id"
           :game-image="game.data.value?.background_image"
           :game-title="game.data.value?.name"
+          :game-rating="game.data.value?.rating"
           :short-screenshots="game.data.value?.short_screenshots"
           :game-description="game.data.value?.description_raw"
         />
