@@ -30,6 +30,7 @@ const gameSchema = z.object({
     .nullable(),
   released: z.string(),
   background_image: z.string(),
+  background_image_additional: z.string(),
   rating: z.number(),
   short_screenshots: z
     .array(

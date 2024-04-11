@@ -39,6 +39,7 @@ const game = useSearchGameById(id);
           :game-platforms="game.data.value?.platforms"
           :short-screenshots="game.data.value?.short_screenshots"
           :game-description="game.data.value?.description_raw"
+          :background_image_additional="game.data.value?.background_image_additional"
         />
       </div>
     </div>

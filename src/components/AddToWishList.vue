@@ -21,5 +21,5 @@ function addToWishList() {
 }
 </script>
 <template>
-  <Button :variants="{ color: 'outline' }" @click="addToWishList" label="Add to wishlist" />
+  <Button :variants="{ color: 'outline' }" @click="addToWishList" label="Add to Wishlist" />
 </template>

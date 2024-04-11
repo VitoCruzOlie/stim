@@ -11,6 +11,7 @@ import { useLibraryListStore } from "@/stores/libraryListSlice";
 
 //Libaries imports
 import { defineProps, ref } from "vue";
+import { useRouter } from 'vue-router';
 
 const props = defineProps<{
   gameId: number;
@@ -26,6 +27,8 @@ function addToLibrary() {
 
 function handleSubmit(event: Event) {
   event.preventDefault();
+  const router = useRouter();
+  router.push('/');
 }
 </script>
 <template>
