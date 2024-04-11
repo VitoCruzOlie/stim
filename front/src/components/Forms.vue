@@ -50,12 +50,12 @@ function handleSubmit(event: Event) {
       </div>
       <div class="w-full flex flex-col gap-1">
         <span>Price</span>
-        <FormInput label="R$50,00" />
+        <FormInput input-type="number" label="R$50,00" />
       </div>
 
       <div class="w-full flex flex-col gap-1 pb-4">
         <span>Email</span>
-        <FormInput label="username@gmail.com" />
+        <FormInput input-type="email" label="username@gmail.com" />
       </div>
 
       <Button

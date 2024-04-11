@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+//Libary imports
+import { useRouter } from "vue-router";
+</script>
 <template>
   <div class="bg-secondary-800 rounded-lg p-2 flex-row flex">
     <div class="gap-2">
@@ -17,9 +20,7 @@
             <span class="text-white text-xs font-medium"
               >XX Games in library</span
             >
-            <spa class="text-white text-xs font-medium"
-              >XX Liked games</spa
-            >
+            <spa class="text-white text-xs font-medium">XX Liked games</spa>
           </div>
         </div>
       </div>
