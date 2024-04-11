@@ -2,18 +2,14 @@
 import {
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogOverlay,
   DialogPortal,
   DialogRoot,
-  DialogTitle,
   DialogTrigger,
 } from "radix-vue";
 
 import Button from "@/components/Button.vue";
 import Forms from "@/components/Forms.vue";
-
-
 </script>
 <template>
   <DialogRoot>
@@ -21,16 +17,14 @@ import Forms from "@/components/Forms.vue";
       <Button :variants="{ color: 'primary' }" label="Buy the Game" />
     </DialogTrigger>
     <DialogPortal>
-      <DialogOverlay />
-      <DialogContent class="absolute left-0 top-0 w-full h-svh flex justify-center items-center z-10">
-       <Forms/>
+      <DialogOverlay
+        className="absolute top-0 left-0 w-full h-full bg-neutral-900/50 z-10 backdrop-blur-lg"
+      />
+      <DialogContent
+        class="absolute left-0 top-0 w-full h-svh flex justify-center items-center z-10"
+      >
+        <Forms />
       </DialogContent>
     </DialogPortal>
   </DialogRoot>
 </template>
-
-<!--
-<DialogDescription />
-<DialogClose />
-</DialogContent>
--->
