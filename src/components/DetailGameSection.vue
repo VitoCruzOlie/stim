@@ -6,7 +6,6 @@ import { PhStar } from "@phosphor-icons/vue";
 //Components imports
 import AddToWishList from "@/components/AddToWishList.vue";
 import Dialog from "./Dialog.vue";
-import GamePlatformTag from "@/components/GamePlatformTag.vue";
 
 //Type imports
 import type { Platform } from "@/schemas/platform";
@@ -41,7 +40,7 @@ defineProps<{
 
       <h1 class="font-bold text-2xl">{{ gameTitle }}</h1>
       <div class="flex flex-row w-full gap-2">
-        <div class="w-full rounded-lg">
+        <div class="w-3/4 rounded-lg">
           <img class="rounded-lg" :src="gameImage" />
         </div>
 

@@ -26,9 +26,9 @@ const game = useSearchGameById(id);
       <NavBar />
       <SideBar />
     </div>
-    <div class="flex flex-col items-center justify-center w-full overflow-y-scroll pt-48 z-10 h-full min-h-svh max-h-svh absolute top-0 left-0 pb-12">
+    <div class="flex flex-col items-center justify-start w-full overflow-y-scroll z-10 h-full min-h-svh max-h-svh absolute top-0 left-0 pb-12">
       <div
-        class="flex items-center justify-center w-full"
+        class="flex flex-col justify-start items-center w-full pt-20"
       >
         <DetailGameSection
           :key="game.data.value?.id"
