@@ -7,11 +7,10 @@ import Button from "./Button.vue";
 import { useSearchGameById } from "@/hooks/queries/useSearchGameById";
 
 //Store imports
-import { useLibraryListStore } from "@/stores/libraryListSlice"
+import { useLibraryListStore } from "@/stores/libraryListSlice";
 
 //Libaries imports
 import { defineProps, ref } from "vue";
-
 
 const props = defineProps<{
   gameId: number;
@@ -25,16 +24,15 @@ function addToLibrary() {
   if (game.data.value) useLibraryListStore().addGame(game.data.value);
 }
 
-
 function handleSubmit(event: Event) {
   event.preventDefault();
 }
-
-
-
 </script>
 <template>
-  <form :onsubmit="handleSubmit" class="py-2 px-10 gap-2 flex flex-col rounded-lg bg-white">
+  <form
+    :onsubmit="handleSubmit"
+    class="py-2 px-10 gap-2 flex flex-col rounded-lg bg-white"
+  >
     <div class="flex items-start justify-start">
       <h2 class="text-lg text-black font-bold">Buy a game</h2>
       <p></p>
@@ -57,7 +55,11 @@ function handleSubmit(event: Event) {
         <FormInput label="username@gmail.com" />
       </div>
 
-      <Button label="Buy game" @click="addToLibrary" :variants="{ color: 'primary' }" />
+      <Button
+        label="Buy game"
+        @click="addToLibrary"
+        :variants="{ color: 'primary' }"
+      />
     </div>
   </form>
 </template>

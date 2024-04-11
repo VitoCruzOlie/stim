@@ -6,6 +6,10 @@ import { PhStar } from "@phosphor-icons/vue";
 //Components imports
 import AddToWishList from "@/components/AddToWishList.vue";
 import Dialog from "./Dialog.vue";
+import GamePlatformTag from "@/components/GamePlatformTag.vue";
+
+//Type imports
+import type { Platform } from "@/schemas/platform";
 
 defineProps<{
   gameId: number;
@@ -13,6 +17,9 @@ defineProps<{
   gameImage?: string;
   gameRating?: number;
   gameDescription?: string;
+  gamePlatforms?: {
+    platform: Platform;
+  }[];
   shortScreenshots?: {
     id: number;
     image: string;
@@ -22,6 +29,16 @@ defineProps<{
 <template>
   <div class="rounded-lg max-w-7xl bg-secondary-800 p-4">
     <div class="w-full text-white">
+      <div class="w-full flex flex-row gap-2">
+        <p
+          class="text-neutral-200 text-xs font-light"
+          v-for="platform in gamePlatforms"
+        >
+          {{ platform.platform.name }}
+        </p>
+        
+      </div>
+
       <h1 class="font-bold text-2xl">{{ gameTitle }}</h1>
       <div class="flex flex-row w-full gap-2">
         <div class="w-full rounded-lg">
@@ -42,7 +59,7 @@ defineProps<{
           </div>
         </div>
       </div>
-      <div class="flex  items-center pt-2 pb-3 gap-2">
+      <div class="flex items-center pt-2 pb-3 gap-2">
         <div class="w-full flex flex-row gap-2">
           <PhStar weight="fill" class="text-2xl text-yellow-400" />
           <p class="text-white text-xl font-bold">{{ gameRating }}</p>
@@ -51,7 +68,9 @@ defineProps<{
         <AddToWishList :gameId="gameId" />
         <Dialog :gameId="gameId" />
       </div>
-      <div class="w-full text-white flex flex-col gap-2 border-t border-t-neutral-400">
+      <div
+        class="w-full text-white flex flex-col gap-2 border-t border-t-neutral-400"
+      >
         <p class="text-white font-bold text-2xl pt-2">Game Description</p>
         <p>
           {{ gameDescription }}
