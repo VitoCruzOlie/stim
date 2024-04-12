@@ -29,9 +29,9 @@ defineProps<{
     >
       <div class="flex flex-row items-center gap-1">
         <div
-          class="rounded-full overflow-hidden border min-h-8 max-h-8 min-w-8 max-w-8"
+          class="rounded-full overflow-hidden border min-h-8 max-h-8 min-w-8 max-w-8 w-8 h-8"
         >
-          <img class="w-8 h-8" alt="Game Image" :src="gameImage" />
+          <img class=" object-cover w-full h-full" alt="Game Image" :src="gameImage" />
         </div>
 
         <div
