@@ -11,29 +11,53 @@ import { useLibraryListStore } from "@/stores/libraryListSlice";
 
 //Libaries imports
 import { defineProps, ref } from "vue";
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
+import {
+  useForm,
+  createErrorHandler,
+  createSubmitHandler,
+} from "@vue-hooks-form/core";
+import { z } from "zod";
+
+import { useZodResolver } from "@vue-hooks-form/zod";
 
 const props = defineProps<{
   gameId: number;
 }>();
 
+const schema = z.object({
+  email: z.string().email({
+    message: "O email informado não é válido",
+  }),
+  price: z.coerce.number().min(10, {
+    message: "O preço do jogo não pode ser inferior a 10 mangos",
+  }),
+});
+
+type Schema = z.infer<typeof schema>;
+
 const tmpGameId = ref(props.gameId.toString());
 
 const game = useSearchGameById(tmpGameId);
 
-function addToLibrary() {
-  if (game.data.value) useLibraryListStore().addGame(game.data.value);
-}
+const form = useForm<Schema>({
+  resolver: useZodResolver(schema),
+});
 
-function handleSubmit(event: Event) {
-  event.preventDefault();
+
+
+const onSubmit = createSubmitHandler((data) => {
+  if (game.data.value) useLibraryListStore().addGame(game.data.value);
   const router = useRouter();
-  router.push('/');
-}
+  router.push("/");
+});
+const onError = createErrorHandler((errors) => {
+  console.log(errors);
+});
 </script>
 <template>
   <form
-    :onsubmit="handleSubmit"
+    @submit.prevent="form.handleSubmit(onSubmit, onError)()"
     class="py-2 px-10 gap-2 flex flex-col rounded-lg bg-white"
   >
     <div class="flex items-start justify-start">
@@ -50,17 +74,31 @@ function handleSubmit(event: Event) {
       </div>
       <div class="w-full flex flex-col gap-1">
         <span>Price</span>
-        <FormInput input-type="number" label="R$50,00" />
+        <FormInput
+          :="form.register('price')"
+          input-type="number"
+          label="R$50,00"
+        />
+        <p class="text-red-600 font-medium text-sm">
+          {{ form.formState.errors.price?.message }}
+        </p>
       </div>
 
       <div class="w-full flex flex-col gap-1 pb-4">
         <span>Email</span>
-        <FormInput input-type="email" label="username@gmail.com" />
+        <FormInput
+          :="form.register('email')"
+          input-type="email"
+          label="username@gmail.com"
+          
+        />
+        <p class="text-red-600 font-medium text-sm">
+          {{ form.formState.errors.email?.message }}
+        </p>
       </div>
 
       <Button
         label="Buy game"
-        @click="addToLibrary"
         :variants="{ color: 'primary' }"
       />
     </div>
