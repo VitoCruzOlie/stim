@@ -29,8 +29,8 @@ const schema = z.object({
   email: z.string().email({
     message: "O email informado não é válido",
   }),
-  price: z.coerce.number().min(10, {
-    message: "O preço do jogo não pode ser inferior a 10 mangos",
+  price: z.coerce.number().min(1, {
+    message: "Defina o preço do jogo",
   }),
 });
 

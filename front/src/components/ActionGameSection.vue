@@ -8,6 +8,8 @@ import { useActionGames } from "@/hooks/queries/useActionGames";
 const games = useActionGames();
 </script>
 <template>
+  <div>
+  <p class="text-white text-2xl font-bold">Action</p>
   <div
     class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 bg-secondary-950 gap-2 p-2 rounded-lg"
   >
@@ -22,4 +24,5 @@ const games = useActionGames();
       :metacriticScore="game.metacritic"
     />
   </div>
+</div>
 </template>

@@ -26,7 +26,7 @@ import NavBar from "@/components/NavBar.vue";
 
     <div class="flex flex-row relative justify-center">
       <div
-        class="flex w-full justify-center pt-96 max-h-screen items-center overflow-y-auto"
+        class="flex w-full justify-center pt-[600px] max-h-screen items-center overflow-y-auto"
       >
         <div class="flex flex-col items-center justify-center w-full gap-4">
           <ActionGameSection />
