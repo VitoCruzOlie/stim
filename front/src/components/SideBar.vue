@@ -3,6 +3,7 @@
 import { PhList } from "@phosphor-icons/vue";
 import { tv } from "tailwind-variants";
 import { useAutoAnimate } from "@formkit/auto-animate/vue";
+import { useRouter } from 'vue-router';
 
 //Components Imports
 import UserSectionComponent from "@/components/UserSectionComponent.vue";
@@ -11,6 +12,12 @@ import LibraryGameSection from "@/components/LibraryGameSection.vue";
 
 //Hook imports
 import { useSideBarStore } from "@/stores/sideBarSlice";
+
+function navigation() {
+  const router = useRouter();
+  router.push('/');
+}
+
 
 const sideBarStore = useSideBarStore();
 
@@ -56,6 +63,11 @@ const sideBarOpen = tv({
       <UserSectionComponent />
       <WishGameSection />
       <LibraryGameSection />
+      <div class="w-full">
+        <button class="bg-secondary-800 w-full h-8 rounded-lg" @click="navigation">
+          <label class="text-white text-base font-bold">Home</label>
+        </button>
+      </div>
     </div>
   </div>
 </template>
