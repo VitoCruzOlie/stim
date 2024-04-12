@@ -1,55 +1,29 @@
-# stim
+# Stim
 
-This template should help get you started developing with Vue 3 in Vite.
+Stim é um catálogo de jogos desenvolvido como parte de um projeto de treinamento na ES. Utiliza a API RawG para listar e pesquisar jogos, além de oferecer funcionalidades como adição de jogos à biblioteca e à lista de desejos. No entanto, o backend do projeto não foi concluído, então as funcionalidades estão disponíveis apenas no frontend.
 
-## Recommended IDE Setup
+## Tecnologias Utilizadas
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Vue](https://vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Radix UI](https://radix-ui.com/)
+- [Tanstack Query](https://tanstack.com/query/)
+- [AutoAnimate](https://www.auto-animate.com/)
+- [Pinia](https://pinia.esm.dev/)
+- [SpeellBinder](https://www.npmjs.com/package/spellbinder)
+- [Zod](https://github.com/colinhacks/zod)
+- [Rawg](https://rawg.io/apidocs)
 
-## Type Support for `.vue` Imports in TS
+## Como Rodar o projeto
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+1. Execute o comando `npm install` para instalar as dependências necessárias.
+2. Crie um arquivo `.env` e insira sua chave de API Rawg conforme o formato presente em `.env.example`. Você pode obter a chave de API [aqui](https://rawg.io/login?forward=developer).
+3. Execute o comando `npm run start`.
 
-## Customize configuration
+## Features Futuras
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- Implementar um sistema de likes para cada jogo.
+- Salvar as informações da biblioteca e da lista de desejos em um banco de dados.
 
-## Project Setup
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
-
-```sh
-npm run test:unit:dev # or `npm run test:unit` for headless testing
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run test:e2e:dev
-```
-
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
-
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
-
-```sh
-npm run build
-npm run test:e2e
-```
