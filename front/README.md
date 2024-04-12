@@ -1,6 +1,6 @@
 # Stim
 
-Stim é um catálogo de jogos desenvolvido como parte de um projeto de treinamento na ES. Utiliza a API RawG para listar e pesquisar jogos, além de oferecer funcionalidades como adição de jogos à biblioteca e à lista de desejos. No entanto, o backend do projeto não foi concluído, então as funcionalidades estão disponíveis apenas no frontend.
+Stim é um catálogo de jogos desenvolvido como parte de um projeto de treinamento na ES. Utiliza a API RawG para listar e pesquisar jogos, além de oferecer funcionalidades como adição de jogos à biblioteca e à lista de desejos. No entanto, o backend do projeto não foi concluído, então as funcionalidades estão disponíveis apenas no front-end.
 
 ## Tecnologias Utilizadas
 
@@ -12,7 +12,6 @@ Stim é um catálogo de jogos desenvolvido como parte de um projeto de treinamen
 - [Pinia](https://pinia.esm.dev/)
 - [SpeellBinder](https://www.npmjs.com/package/spellbinder)
 - [Zod](https://github.com/colinhacks/zod)
-- [Rawg](https://rawg.io/apidocs)
 
 ## Como Rodar o projeto
 
@@ -24,6 +23,7 @@ Stim é um catálogo de jogos desenvolvido como parte de um projeto de treinamen
 
 - Implementar um sistema de likes para cada jogo.
 - Salvar as informações da biblioteca e da lista de desejos em um banco de dados.
+- Sistema fake de compra de jogos
 
 
 
